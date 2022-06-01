@@ -1,193 +1,212 @@
-* {
+*{
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* SERVICES */
+
+#services{
+    display: flex;
+    width: 100%;
     box-sizing: border-box;
+    padding: 100px 50px;
+    background-color: #111215;
+    background-image: url(img/services.jpeg);
 }
 
-.flex-body {
-    display: flex;
+.services-content{
+    width: 30%;
 }
 
-#main-section {
-    height: 100vh;
-    width: 100%;
-}
-
-nav {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-}
-
-
-
-
-li {
-    font-size: 30px;
-    padding: 20px;
+.services-content h4{
+    border-bottom: 1px solid #ffffff;
     display: inline-block;
-    text-decoration: none;
-    color: aliceblue;
-
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#backgroundimage {
-    z-index: -1;
-    background-image: url('./img/darkcity.png');
-    background-size: 100% 100%;
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-}
-
-
-
-
-#backgroundimage::after {
-    content: "";
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-}
-
-.info {
-    margin-top: 100px;
-    width: 50%;
-    height: 20%;
-}
-
-p {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: aliceblue;
+.services-content h1{
     font-size: 50px;
-    text-align: center;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 60px;
 }
 
-.lightsaber {
-    display: flex;
-    width: 80%;
-    height: 10px;
-    border: 1px solid rgb(55, 55, 232);
-    background-color: rgb(217, 224, 235);
-    border-radius: 50px;
-    box-shadow: 0 0 30px 3px rgb(90, 90, 700);
-    margin: 50px;
-}
-
-.poligon {
-    width: 300px;
-    height: 60px;
-    background-color: blueviolet;
-    clip-path: polygon(0 0, 90% 0, 100% 45%, 100% 100%, 10% 100%, 0 49%);
-}
-
-.enternewera {
-    position: absolute;
-    bottom: 15%;
-    left: 25%;
-    filter: drop-shadow(10px 10px 20px rgb(102, 72, 133));
-    margin-left: 10%;
-
-}
-
-.hamburger {
-    display: none;
-    position: relative;
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
-    appearance: none;
-    background: none;
-    border: none;
-    outline: none;
-    z-index: 99;
-
-}
-
-.hamburger .bar,
-.hamburger::after,
-.hamburger:before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 5px;
-    background-color: aliceblue;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
-.hamburger.is-active::before {
-    transform: rotate(-45deg) translate(-8px, 6px);
-
-}
-
-.hamburger.is-active::after {
-    transform: rotate(45deg) translate(-9px, -8px);
-
-}
-
-.hamburger.is-active .bar {
-    opacity: 0;
-
-}
-
-.mobile-nav {
-    position: fixed;
-    top: 0;
-    left: 100%;
-    width: 100%;
-    min-height: 100vh;
-    display: block;
-    z-index: 98;
-    background-color: rgb(159, 46, 46);
-    padding-top: 120px;
-    transition: 0.4s;
-    
-}
-
-.mobile-nav.is-active{
-    left: 0;
-}
-
-.mobile-nav a {
-    display: block;
-    width: 100%;
-    max-width: 200px;
-    margin: 0 auto 16px;
-    text-align: center;
-    padding: 12px 16px;
-    background-color: darkblue;
-    color: aliceblue;
+.services-content h5 a{
+    color: white;
     text-decoration: none;
-    clip-path: polygon(0 0, 90% 0, 100% 45%, 100% 100%, 10% 100%, 0 49%);
-
+}
+.services-content h5{
+    background: linear-gradient(90deg,#d90a2c 1.05%,#730000);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 1s;
+}
+.services-content h5:hover{
+    background: black;
 }
 
-.mobile-nav a:hover{
-    background-color: aqua;
-    transition: 0.4s;
+
+
+.services-cards{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+}
+.services-cards .card{
+    position: relative;
+    width: 45%;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(248, 243, 243);
+    box-shadow: 0 0 6px 1px white;
+    background: transparent;
+    cursor: pointer;
+    padding: 20px;
+    transition: all .4s ease-in-out;
+}
+.services-cards .card:hover{
+    box-shadow: 0 0 30px 5px white;
+    background: linear-gradient(90deg, rgba(85,58,180,0.9038209033613446) 19%, rgba(173,29,253,1) 50%, rgba(252,176,69,1) 100%);
+}
+.services-cards .card p a{
+    text-decoration: none;
+    color: rgb(200, 3, 3);
 }
 
-
-@media (max-width: 1000px) {
-
-    .enternewera {
-        position: none;
-        display: flex;
-    }
-
-    .hamburger{
-        display: block;
-        position: absolute;
-        right: 20px;
-        top: 20px;
-    }
-
-    nav{
-        display: none;
-    }
-
-   
+.blur{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    backdrop-filter: blur(8px);
 }
+
+.not-blur{
+    display: flex;
+}
+
+.card-logo{
+    z-index: 1;
+    border-right: 1px solid black;
+    width: 20%;
+    height: 100%;
+    font-size: 50px;
+    color: red;
+}
+.card-logo:nth-child(1){
+    padding-left: 10px;
+}
+.card-content{
+    width: 80%;
+    height: 100%;
+    color: #E4E4E4;
+    padding-left: 10px;
+    position: relative;
+}
+.card-content span{
+    position: absolute;
+    right: 5px;
+    top: -5px;
+    font-size: 30px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1360px){
+    .card-logo{
+        width: 25%;
+    }
+}
+
+@media (max-width: 1200px){
+    .services-cards .card{
+        width: 45%;
+        height: 40%;
+    }
+
+    .card-logo{
+        font-size: 45px;
+    }
+
+    .card-content{
+        font-size: 14px;
+    }
+
+    .services-content h1{
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 992px){
+    #services{
+        flex-direction: column;
+    }
+
+    .services-content{
+        width: 100%;
+        text-align: center;
+    }
+
+    .services-cards{
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px){
+    .services-cards .card{
+        max-height: 380px;
+    }
+
+    .not-blur{
+        flex-direction: column;
+    }
+
+    .card-logo{
+        border: none;
+        margin: auto;
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+
+    .card-content{
+        text-align: center;
+        margin: auto;
+        font-size: 14px;
+    }
+
+    .card-content span{
+        position: sticky;
+    }
+}
+
+@media(max-width: 600px){
+    .services-cards .card{
+        width: 100%;
+        max-height: 100%;
+    }
+
+    .card-content{
+        font-size: 20px;
+    }
+
+    .card-logo{
+        font-size: 60px;
+        margin-left: 40%;
+    }
+
+    .fa-mobile-screen-button{
+        margin-left: 15%;
+    }
+}
+
