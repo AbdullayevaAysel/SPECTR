@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    width: 100%;
+}
+.scroll {
+    width: 5px;
+    height: 20px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+.about {
+    background-image: url("../img/kevin-laminto-7PqRZK6rbaE-unsplash\ 1.png");
+    background-size: 100% 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.about-borders {
+    background-color: black;
+    position: absolute;
+    padding: 5px;
+    overflow: hidden;
+    /* animation: pulse 2s ease-in-out infinite alternate; */
+    animation: shadow 2s ease-in-out infinite alternate;
+    
+}
+.about-borders::before {
+    content: '';
+    width: 10%;
+    position: absolute;
+    display: block;
+    height: 300%;
+    background-color: aqua;
+    animation: spin 2s infinite;
+    top: -80%;
+    left: 39%;
+}
+#about-content {
+    position: relative;
+    display: block;
+    opacity: 1;
+    padding: 30px 10px 40px;
+    width: 500px;
+    color: white;
+    background-color: black;
+}
+@keyframes shadow {
+    0%{
+        box-shadow: 0 0 40px 3px rgb(8,136,152);
+    }
+    100%{
+        box-shadow: 0 0 40px 30px rgb(8,136,152);
+    }
+}
+@keyframes pulse {
+    100%{
+        background-color: aqua;
+    }
+}
+
+@keyframes spin {
+    0% {
+        background-color: green;
+    }
+
+    25% {
+        background-color: red;
+    }
+
+    50% {
+        background-color: blue;
+    }
+
+    75% {
+        background-color: aquamarine;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        width: 20%;
+    }
+}
+
+
+/* !Sonra Bax arrowa */
+.arrow {
+    position: absolute;
+    margin: 100px auto;
+    left: 10%;
+    top: 10%;
+    background-color: blue;
+    width: 4px;
+    height: 200px;
+    box-shadow: 0 0 50px 5px white;
+    transform: translateZ(10px);
+    transform: rotate(-80deg);
+}
+
+@media only screen and (max-width: 1000px) {
+    #about-content {
+        width: 400px;
+    }
+}
+
