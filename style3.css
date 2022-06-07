@@ -22,6 +22,14 @@ body {
     padding: 0 100px;
 }
 
+p {
+    margin-bottom: 0 !important;
+}
+
+a:hover {
+    color: var(--dark-red) !important;
+}
+
 .row {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
@@ -119,6 +127,7 @@ body {
     border-bottom: 1px solid var(--dark-red);
     text-transform: uppercase;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .button {
@@ -183,8 +192,16 @@ footer {
     color: var(--font-color);
 }
 
+footer ul li {
+    padding: 10px 0;
+}
+
 .links {
     padding: 50px 0;
+}
+
+.links a {
+    text-decoration: none;
 }
 
 .links .logo {
@@ -205,6 +222,27 @@ footer {
     border-bottom: 2px solid var(--dark-red);
 }
 
+.links ul {
+    margin-bottom: 0 !important;
+    padding-left: 0 !important;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.social-links a,
+.contacts i {
+    font-size: 20px;
+}
+
+.social-links a {
+    color: #fff;
+    cursor: pointer;
+}
+
 ul.contacts li:not(:first-child) {
     display: flex;
     align-items: center;
@@ -212,7 +250,7 @@ ul.contacts li:not(:first-child) {
 
 ul.contacts i {
     color: var(--dark-red);
-    padding-right: 10px;
+    padding-right: 12px;
 }
 
 .copyright {

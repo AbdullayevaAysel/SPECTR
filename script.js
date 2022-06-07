@@ -1,5 +1,5 @@
-let button = document.querySelector(".button");
-button.addEventListener("click", function(e) {
+let btn_effect = document.querySelector(".button");
+btn_effect.addEventListener("click", function(e) {
     console.log(e);
     let x = e.clientX - e.target.offsetLeft;
     let y = e.clientY - e.target.offsetTop;
